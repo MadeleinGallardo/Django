@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <h1>
+                Hola made estas haciendo una plantilla
+        </h1>
+        <p>El nombre es: {{nombre_persona}} y su apellido: {{apellido_persona}}</p>
+        <p>Plantillas vistas el dia {{momento_actual.day}}/{{momento_actual.month}}/{{momento_actual.year}}</p>
+        <p>
+            <ul>
+            {%if temas%}
+                {% for el_tema in temas%}
+                    <li>{{el_tema}}</li>
+
+                {% endfor %}
+            {%else%}
+                <p>No hay elementos que mostrar</p>
+            {%endif%} 
+        </ul>
+        </p>
+    </body>
+</html>
