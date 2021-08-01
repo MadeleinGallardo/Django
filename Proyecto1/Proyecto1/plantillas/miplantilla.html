@@ -1,15 +1,30 @@
 <html>
     <body>
+        {%include 'barra.html'%}
         <h1>
                 Hola made estas haciendo una plantilla
         </h1>
-        <p>El nombre es: {{nombre_persona}} y su apellido: {{apellido_persona}}</p>
+        {# Esto es un comentario de una linea #}
+        {% comment %}
+        Comentario 
+        de 
+        muchas
+        lineas 
+        {% endcomment %}
+        {% if nombre_persona == 'Juan' %}
+            <p>A made le esta funcionanado esto</p>
+        
+        {%else%}
+            <p>No se esta cumpliendo la condicion</p>
+        {%endif%}
+
+        <p>El nombre es: {{nombre_persona.upper}} y su apellido: {{apellido_persona|upper}}</p>
         <p>Plantillas vistas el dia {{momento_actual.day}}/{{momento_actual.month}}/{{momento_actual.year}}</p>
         <p>
             <ul>
             {%if temas%}
                 {% for el_tema in temas%}
-                    <li>{{el_tema}}</li>
+                    <li>{{el_tema|first|lower}}</li>
 
                 {% endfor %}
             {%else%}

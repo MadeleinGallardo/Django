@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+</head>
+<body>
+    <h1 style = 'background-color:blue; color: white; text-align:center'>Pagina Elevar</h1>
+    {%include 'barra.html'%}
+    <h3>Organizacion sin fines de lucro </h3>
+    {% block content %}{% endblock  %}
+
+    <p style = 'background-color:blue; color: white; text-align:right'>Gracias por su visita </p>
+</body>
+</html>
